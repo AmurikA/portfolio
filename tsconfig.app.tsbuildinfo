@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/router.tsx","./src/vite-env.d.ts","./src/componens/layout/header/header.tsx","./src/componens/layout/header/module/navbar.tsx","./src/componens/layout/main/main.tsx","./src/componens/layout/main/about_section/about.tsx","./src/componens/layout/main/introduce_section/introduce.tsx","./src/pages/portfoliopage.tsx"],"version":"5.6.3"}

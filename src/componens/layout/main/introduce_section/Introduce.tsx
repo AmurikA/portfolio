@@ -6,7 +6,7 @@ import FigmaLogoImg from '../../../../assets/figma.svg';
 import sircle from "../../../../assets/sircle.svg"
 const Introduce: React.FC = () => {
     return (
-        <div className="container flex space-between  px-6 mx-auto py-20">
+        <div className="container flex space-between  px-6 mx-auto py-20 pb-32">
             <div className="flex flex-col items-start w-2/4 gap-10 ">
                 <div className="">
                     <span className="text-2xl">
@@ -33,7 +33,7 @@ const Introduce: React.FC = () => {
                 </div>
 
                 <div className={"flex items-center justify-center "}>
-                    <div className="bg-blue-300 py-3  px-5 rounded-2xl">Download CV</div>
+                    <div className="bg-orange-500 py-3  px-5 rounded-2xl">Download CV</div>
                     <img src={sircle} alt={"Tiktok Logo"} className={"px-3 "}/>
                     <h1 className={"text-gray-100 text-2xl"}>Available for Hire</h1>
                 </div>
