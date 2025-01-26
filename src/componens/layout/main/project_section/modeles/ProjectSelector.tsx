@@ -1,15 +1,14 @@
 import React from "react";
 
-// Тип для данных проекта
 type Project = {
-    image: string; // Ссылка на изображение
-    title: string; // Название проекта
-    description: string; // Описание проекта
+    image: string;
+    title: string;
+    description: string;
     link: string;
 };
 
 type ProjectSelectorProps = {
-    projects: Project[]; // Список проектов
+    projects: Project[];
 };
 
 const ProjectSelector: React.FC<ProjectSelectorProps> = ({ projects }) => {
@@ -26,10 +25,10 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({ projects }) => {
                         className="w-2/4 h-full object-cover"
                     />
                     <div className="absolute w-2/4 h-full bg-black/50 flex flex-col justify-end p-4 ">
-                        {/* Описание */}
+
                         <h3 className="text-white text-xl font-bold mt-2">{project.title}</h3>
                         <p className="text-white text-sm mt-1">{project.description}</p>
-                        {/* Кнопка */}
+
 
                              <a  href={project.link} target="_blank" rel="noreferrer" className="mt-3 bg-white text-black rounded-full w-10 h-10 flex justify-center items-center shadow-md">
                                 →
