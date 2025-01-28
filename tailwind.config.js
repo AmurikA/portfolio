@@ -14,6 +14,7 @@ export default {
         },
         extend: {
             fontSize: {
+                "14px": "14px",
                 "16px": "16px",
                 "20px": "20px",
                 "24px": "24px",
@@ -54,7 +55,7 @@ export default {
                 },
             },
             animation: {
-                'fade-slide': 'fade-slide 1s ease-in-out',
+                'fade-slide': 'play 0.5s steps(4) infinite',
             },
         },
     },

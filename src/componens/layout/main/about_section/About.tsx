@@ -12,19 +12,24 @@ const About: React.FC = () => {
             User Interface and User Experience and Also video editing
                 </span>
             </div>
-            <div className="flex">
-                <div className="w-2/4  items-center ">
-                    A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes
-                    of code, sculpting intangible structures that shape our technological world. With fingers poised
-                    over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of
-                    algorithms and solutions.Their canvas is a screen, a vast expanse where lines of code dance in
-                    intricate patterns, weaving the fabric of programs and applications. Each keystroke is a
-                    brushstroke, crafting intricate architectures and breathing life into innovative designs.In this
-                    digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant
-                    knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the
-                    mysteries hidden within the tangled webs of code. designs.In this digital atelier.
+            <div className="grid grid-cols-1  gap-5 laptop:grid-cols-2 laptop:items-start  ">
+                <div className=" text-16px text-justify space-y-4  laptop:text-20px pb-5 ">
+                    <p>З самого дитинства мене захоплював процес створення сайтів і можливість власноруч втілювати власні
+                    ідеї. Зараз я студент, який активно опановує фронтенд-розробку та вивчає сучасні технології, щоб
+                    перетворити своє захоплення на професію.</p>
+
+                   <p> Хоча я ще не маю комерційного досвіду, я вже брав участь у навчальному проєкті, де разом із командою
+                    створював сайт для студентського самоврядування ДУІКТ.У рамках цього проєкту я займався розробкою
+                    дизайну, а також його реалізацією за допомогою React
+                    Це дало мені цінний досвід у розробці як передньої, так і задньої частини сайту, а також можливість
+                    відчути весь процес створення проєкту з
+                    нуля.</p>
+
+                    <p>Я завжди прагну вчитися, експериментувати та вдосконалювати свої навички, щоб у майбутньому
+                       реалізовувати цікаві ідеї на професійному рівні..</p>
+
                 </div>
-                <div className="w-2/4 relative flex justify-end overflow-hidden">
+                <div className="relative flex justify-center overflow-hidden">
                     <img src={AnurkaGit} alt="Фон" className="absolute  object-cover"/>
                     <ImgAnimation/>
                 </div>
