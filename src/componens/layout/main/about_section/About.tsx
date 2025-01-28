@@ -5,7 +5,7 @@ import AnurkaGit from "../../../../assets/frame/githubframe.png"
 
 const About: React.FC = () => {
     return (
-        <div className="container flex flex-col gap-5 mx-auto ">
+        <div className="container flex flex-col gap-5 mx-auto px-5">
             <div className="flex flex-col justify-center items-center py-5">
                 <h1 className={"text-4xl py-3"}>About Me</h1>
                 <span className="text-xl text-describe-gray">
