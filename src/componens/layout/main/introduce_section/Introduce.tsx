@@ -24,7 +24,7 @@ const Introduce: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col items-start mx-auto laptop:mx-0 ">
-                    <h1 className="text-center font-black text-transparent bg-clip-text bg-bg-Front text-70px phoneLg:text-85px  laptop:text-70px laptop:text-start ">Frontend
+                    <h1 className="text-center font-black text-transparent bg-clip-text bg-bg-Front text-60px phoneLg:text-85px  laptop:text-70px laptop:text-start ">Frontend
                                                                                                                                                                       Developer</h1>
                 </div>
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
@@ -46,7 +46,7 @@ const Introduce: React.FC = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="mx-auto px-5 space-y-4  text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px">
+                <div className="mx-auto px-5 space-y-4  text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px laptop:px-0">
                     <p>
                     З самого дитинства мене захоплювала розробка сайтів та можливість створювати щось нове власними
                     руками.</p>

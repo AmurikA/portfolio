@@ -8,8 +8,7 @@ const About: React.FC = () => {
         <div className="container flex flex-col gap-5 mx-auto px-5">
             <div className="flex flex-col justify-center items-center py-5">
                 <h1 className={"text-4xl py-3"}>About Me</h1>
-                <span className="text-xl text-describe-gray">
-            User Interface and User Experience and Also video editing
+                <span className="text-xl text-describe-gray text-center">What I want
                 </span>
             </div>
             <div className="grid grid-cols-1  gap-5 laptop:grid-cols-2 laptop:items-start  ">

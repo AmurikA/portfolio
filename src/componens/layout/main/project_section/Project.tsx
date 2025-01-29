@@ -1,14 +1,15 @@
 import React from 'react';
 import ProjectSelector from "./modeles/ProjectSelector.tsx";
-import Project1 from  "../../../../assets/mainProject.png"
+import Project1 from "../../../../assets/mainProject.png"
 
 const Project: React.FC = () => {
     const projects = [
         {
-            image: Project1, // Замените на путь к вашему изображению
-            title: "Головний проект ",
-            description: "Сайт для Студенського самоврядування ДУІКТ",
-            link:"https://github.com/DUIKTSSD/ssd"
+            image: Project1,
+            title: "Сайт Студенського Самоврядування Дуікт",
+            subtitle: "Проєкт, у якому я зрозумів, що таке бути розробником.",
+            description: "Це моя перша командна робота, у якій ми розробили повноцінний вебсайт із функціоналом. Користувачі можуть додавати меми та проекти.Сайт має систему адміністрування для управління контентом",
+            link: "https://github.com/DUIKTSSD/ssd"
         },
 
     ];
