@@ -16,6 +16,7 @@ export default {
             fontSize: {
                 "14px": "14px",
                 "16px": "16px",
+                "18px": "18px",
                 "20px": "20px",
                 "24px": "24px",
                 "26px": "26px",
@@ -43,10 +44,12 @@ export default {
                 'white-dark': '#959595',
                 'active': "#FD6F00",
                 'gray-text': "#707070",
+                'heading-bg':'#E8E7E7'
             },
             backgroundImage: {
                 'bg-logo': 'linear-gradient(90deg, #FA6E00 0%, #E60026 100%);',
-                'bg-Front': 'linear-gradient(90deg, #984300 0.34%, #FD6F00 42.06%, #CA5900 90.34%);'
+                'bg-Front': 'linear-gradient(90deg, #984300 0.34%, #FD6F00 42.06%, #CA5900 90.34%);',
+                'quote': 'linear-gradient(91deg, #DBFF00 4.92%, #0F172A 37.44%)',
             },
             keyframes: {
                 'fade-slide': {
