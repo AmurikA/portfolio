@@ -35,7 +35,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({projects}) => {
                             href={project.link}
                             target="_blank"
                             rel="noreferrer"
-                            className="mt-3 inline-flex items-center justify-center bg-white text-black rounded-full w-10 h-10 shadow-md"
+                            className="mt-3 text-24px inline-flex items-center justify-center bg-white text-black rounded-full w-10 h-10 shadow-md"
                         >
                             →
                         </a></div>

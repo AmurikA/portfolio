@@ -30,29 +30,33 @@ const Introduce: React.FC = () => {
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
                     <ul className="flex gap-7">
                         <li>
-                            <img src={InstagramLogoImg}
-                                 alt="Instagram Logo"
-                                 className="w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
-                        </li>
+                            <a href={""}>
+                                <img src={InstagramLogoImg}
+                                     alt="Instagram Logo"
+                                     className="w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
+                            </a></li>
                         <li>
-                            <img src={GitLogoImg}
-                                 alt="Git Logo"
-                                 className=" w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
-                        </li>
-                        <li>
+                            <a href={""}>
+                                <img src={GitLogoImg}
+                                     alt="Git Logo"
+                                     className=" w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
+                            </a></li>
+                        <li><a href={""}>
                             <img src={FigmaLogoImg}
                                  alt="Figma Logo"
                                  className=" w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
+                        </a>
                         </li>
                     </ul>
                 </div>
                 <div className="mx-auto px-5 space-y-4  text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px laptop:px-0">
                     <p>
-                    З самого дитинства мене захоплювала розробка сайтів та можливість створювати щось нове власними
-                    руками.</p>
+                        З самого дитинства мене захоплювала розробка сайтів та можливість створювати щось нове власними
+                        руками.</p>
                     <p>
-                    Я завжди прагну розвиватися, вдосконалювати свої вміння та досягати більшого, щоб реалізовувати свої
-                    ідеї на достойному рівні!</p>
+                        Я завжди прагну розвиватися, вдосконалювати свої вміння та досягати більшого, щоб реалізовувати
+                        свої
+                        ідеї на достойному рівні!</p>
                 </div>
                 <div className={"items-center justify-center w-full mx-auto flex flex-col  tablet:flex-row laptop:mx-0 laptop:justify-start "}>
                     <div className="bg-orange-500 p-5 rounded-2xl text-white text-center text-24px  phoneLg:text-30px tablet:p-5 tablet:text-24px laptop:text-20px px-5">

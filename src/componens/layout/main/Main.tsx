@@ -5,6 +5,7 @@ import MyStack from "./steck_section/MyStack.tsx";
 import Quote from "./quote_section/Quote.tsx";
 
 const Main = () => {
+
     return (
         <div>
             <Indroduce/>
