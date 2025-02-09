@@ -1,28 +1,35 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router-dom";
+import {Link} from "react-scroll";
 
 const Navbar: React.FC = () => {
-  const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
+    const navigate = useNavigate();
     const toggleMenu = () => {
-  document.getElementById("burger")?.classList.toggle("active");
-  document.getElementById("mobileMenu")?.classList.toggle("hidden");
-  document.getElementById("mobileMenu")?.classList.toggle("flex");
-  document.body.classList.toggle("overflow-hidden");
-};
-     const changeLanguage = (lang: string) => {
-        i18n.changeLanguage(lang);
+        document.getElementById("burger")?.classList.toggle("active");
+        document.getElementById("mobileMenu")?.classList.toggle("hidden");
+        document.getElementById("mobileMenu")?.classList.toggle("flex");
+        document.body.classList.toggle("overflow-hidden");
+    };
+
+    const changeLanguage = (lang: string) => {
+        navigate(lang, {replace: true});
+        if (window.innerWidth < 1024) {
+            toggleMenu();
+        }
     };
     return (
 
-      <div className="flex justify-between items-center mx-auto py-10 px-5">
+        <div className=" container flex  justify-between items-center mx-auto py-10 px-5  " >
             <span className="font-bold font-k2D tracking-[0.9px] text-transparent bg-clip-text bg-bg-logo text-[24px] laptop:text-[30px] z-50">
                 My Portfolio:)
             </span>
 
             {/* Language Switcher */}
-            <div className="flex space-x-2 absolute right-5 top-5">
+            <div className=" hidden laptop:flex space-x-2 absolute right-5 top-5">
                 <button
-                    onClick={() => changeLanguage("en")}
+                    onClick={() => changeLanguage("/en")}
                     className={`px-2 py-1 text-sm font-bold rounded ${
                         i18n.language === "en" ? "bg-white text-black" : "bg-gray-500 text-white"
                     }`}
@@ -30,7 +37,7 @@ const Navbar: React.FC = () => {
                     En
                 </button>
                 <button
-                    onClick={() => changeLanguage("ua")}
+                    onClick={() => changeLanguage("/ua")}
                     className={`px-2 py-1 text-sm font-bold rounded ${
                         i18n.language === "ua" ? "bg-white text-black" : "bg-gray-500 text-white"
                     }`}
@@ -42,20 +49,48 @@ const Navbar: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden laptop:flex">
                 <ul className="flex space-x-20 text-[20px] text-white-dark">
-                    <li><a href="" className="text-active font-bold">{t("logo")}</a></li>
-                    <li><a href="">{t("about")}</a></li>
-                    <li><a href="">{t("projects")}</a></li>
-                    <li><a href="">{t("contact")}</a></li>
+                    <li><Link to="home" smooth={true} duration={500} offset={-100} className="cursor-pointer text-active font-bold">{t("logo")}</Link></li>
+                    <li><Link to="about" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("about")}</Link>
+                    </li>
+                    <li><Link to="myStack" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("stack")}</Link>
+                    </li>
+                    <li><Link to="projects" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("projects")}</Link></li>
+                    <li><Link to="quote" smooth={true} duration={500}  offset={-100} className="cursor-pointer">{t("Quote")}</Link>
+                    </li>
                 </ul>
             </nav>
 
             {/* Mobile Navigation */}
-            <nav id="mobileMenu" className="hidden fixed left-0 top-0 bottom-0 h-full w-full items-center justify-center bg-main-background z-20 laptop:hidden">
+            <nav id="mobileMenu"
+                 className="hidden fixed left-0 top-0 bottom-0 h-full w-full items-center justify-center bg-main-background z-20 laptop:hidden">
                 <ul className="flex flex-col items-center gap-12 text-[30px] text-white-dark">
-                    <li><a href="" className="text-active font-bold">{t("logo")}</a></li>
-                    <li><a href="">{t("about")}</a></li>
-                    <li><a href="">{t("projects")}</a></li>
-                    <li><a href="">{t("contact")}</a></li>
+                    <li ><Link to="home" smooth={true} duration={500} offset={-120}  className="cursor-pointer text-active font-bold" onClick={toggleMenu}>{t("logo")}</Link></li>
+                    <li><Link to="about" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("about")}</Link>
+                    </li>
+                    <li><Link to="myStack" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("stack")}</Link>
+                    </li>
+                    <li><Link to="projects" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("projects")}</Link>
+                    </li>
+                    <li><Link to="quote" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("Quote")}</Link>
+                    </li>
+                    <div className=" flex space-x-5 ">
+                        <button
+                            onClick={() => changeLanguage("/en")}
+                            className={`px-4 py-4 text-sm font-bold rounded ${
+                                i18n.language === "en" ? "bg-white text-black" : "bg-gray-500 text-white"
+                            }`}
+                        >
+                            En
+                        </button>
+                        <button
+                            onClick={() => changeLanguage("/ua")}
+                            className={`px-4 py-4 text-sm font-bold rounded ${
+                                i18n.language === "ua" ? "bg-white text-black" : "bg-gray-500 text-white"
+                            }`}
+                        >
+                            Ua
+                        </button>
+                    </div>
                 </ul>
             </nav>
 

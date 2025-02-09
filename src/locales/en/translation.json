@@ -1,8 +1,9 @@
 {
-  "logo": "Logo",
+  "logo": "Home",
   "about": "About ",
-  "welcome": "Welcome to my portfolio",
   "projects": "Projects",
+  "stack": "MyStack",
+  "quote":"Quote",
   "contact": "Contacts",
   "hi": "Hi I am ",
   "myName": "Kotasov Oleksandr",
@@ -26,7 +27,7 @@
       "link": "https://github.com/DUIKTSSD/ssd"
     }
   ],
-  "quote": "Good design is a language, not a style",
+  "quoteSection": "Good design is a language, not a style",
   "quoteAuthor": "Massimo Vignelli",
   "footerTitle": "Let’s Work Together!",
   "footerEmail": "My Gmail: "

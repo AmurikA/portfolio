@@ -12,7 +12,7 @@ const Project: React.FC = () => {
         link: string;
     }[];
     return (
-        <div className="container flex flex-col gap-5 mx-auto p-4">
+        <div id={"projects"} className="container flex flex-col gap-5 mx-auto p-4">
             <div className="flex flex-col justify-center items-center py-5">
                 <h1 className={"text-4xl py-3 text-heading-bg"}>{t("projectSection")}</h1>
                 <span className="text-xl text-describe-gray">{t("projectSubtext")}</span>

@@ -18,7 +18,7 @@ const MyStack = () => {
     ];
 
     return (
-        <div className="container flex flex-col gap-5 mx-auto py-5 ">
+        <div id="myStack" className="container flex flex-col gap-5 mx-auto py-5 ">
             <div className="flex flex-col justify-center items-center py-5">
                 <h1 className={"text-4xl py-3 text-heading-bg"}>{t("myStack")}</h1>
                 <span className="text-xl text-describe-gray text-center">{t("techDescribe")}

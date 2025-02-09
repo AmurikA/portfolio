@@ -10,7 +10,8 @@ import {useTranslation} from "react-i18next";
 const Introduce: React.FC = () => {
    const { t } = useTranslation();
     return (
-        <div className="container flex flex-col py-1 phoneLg:py-10 laptop:flex-row px-6 mx-auto  gap-10 ">
+        <div id="home"
+             className="container flex flex-col py-1 phoneLg:py-10 laptop:flex-row px-6 mx-auto gap-10 mt-[100px] ">
             <div className="relative flex flex-col items-start gap-10 laptop:w-2/4    ">
                 <img
                     src={vector}
@@ -63,7 +64,7 @@ const Introduce: React.FC = () => {
                         <img src={sircle} alt={"Tiktok Logo"} className={" px-3 my-3 tablet:my-0 tablet:ml-5"}/>
                         <h1 className={"text-gray-100 rounded-2xl text-center text-14px  phoneLg:text-20px"}>
                             {t("hire")}
-                         
+
                         </h1>
                     </div>
                 </div>
