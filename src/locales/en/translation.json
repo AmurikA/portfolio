@@ -1,0 +1,33 @@
+{
+  "logo": "Logo",
+  "about": "About ",
+  "welcome": "Welcome to my portfolio",
+  "projects": "Projects",
+  "contact": "Contacts",
+  "hi": "Hi I am ",
+  "myName": "Kotasov Oleksandr",
+  "job": "Frontend Developer",
+  "describeMe": "<p>Since childhood, I have been fascinated by web development and the ability to create something new with my own hands.</p><p>I always strive to grow, improve my skills, and achieve more in order to bring my ideas to life at a high level!</p>",
+  "downloadCv": "Download CV",
+  "hire": "Available for Hire",
+  "aboutMe": "About Me",
+  "aboutDescribe": "What i want",
+  "myChild": "<p>Since childhood, I have been fascinated by the process of creating websites and the ability to bring my own ideas to life. Now, I am a student actively learning frontend development and studying modern technologies to turn my passion into a profession.</p> <p>Although I do not yet have commercial experience, I have participated in an educational project where, together with a team, I created a website for the student government of DUKiT. As part of this project, I worked on both the design and its implementation using React. This gave me valuable experience in both frontend and backend development, as well as an opportunity to experience the full process of creating a project from scratch.</p> <p>I am always eager to learn, experiment, and improve my skills so that in the future, I can bring interesting ideas to life at a professional level.</p>",
+  "myStack": "My Stack",
+  "techDescribe": "Technologies and tools I use for web applications",
+  "projectSection": "Portfolio & Projects",
+  "projectSubtext": "My work experience",
+  "myProjects": [
+    {
+      "image": "images/myProjects/mainProject.png",
+      "title": "Student Self-Government Website of DUIKT",
+      "subtitle": "A project where I realized what it means to be a developer.",
+      "description": "This is my first team project, where we developed a fully functional website. Users can add memes and projects. The site has an administration system for content management.",
+      "link": "https://github.com/DUIKTSSD/ssd"
+    }
+  ],
+  "quote": "Good design is a language, not a style",
+  "quoteAuthor": "Massimo Vignelli",
+  "footerTitle": "Let’s Work Together!",
+  "footerEmail": "My Gmail: "
+}

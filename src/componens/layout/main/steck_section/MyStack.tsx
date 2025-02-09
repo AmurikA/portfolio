@@ -4,8 +4,10 @@ import TSStack from "../../../../assets/TSStack.png"
 import ReactStack from "../../../../assets/ReactStack.png"
 import ReduxStack from "../../../../assets/ReduxStack.png"
 import NodeStack from "../../../../assets/NodeStack.png"
+import {useTranslation} from "react-i18next";
 
 const MyStack = () => {
+    const { t } = useTranslation();
     const stack = [
         {img: FigmaStack, name: "FigmaStack"},
         {img: TailwindStack, name: "TailwindStack"},
@@ -18,8 +20,8 @@ const MyStack = () => {
     return (
         <div className="container flex flex-col gap-5 mx-auto py-5 ">
             <div className="flex flex-col justify-center items-center py-5">
-                <h1 className={"text-4xl py-3 text-heading-bg"}>My stack</h1>
-                <span className="text-xl text-describe-gray text-center">Technologies and tools I use for web applications
+                <h1 className={"text-4xl py-3 text-heading-bg"}>{t("myStack")}</h1>
+                <span className="text-xl text-describe-gray text-center">{t("techDescribe")}
                 </span>
             </div>
             <div className="grid grid-cols-2 gap-5 tablet:grid-cols-3 laptop:grid-cols-6 justify-center">

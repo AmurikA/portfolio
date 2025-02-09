@@ -5,8 +5,10 @@ import GitLogoImg from '../../../../assets/github.svg';
 import FigmaLogoImg from '../../../../assets/figma.svg';
 import sircle from "../../../../assets/sircle.svg"
 import vector from "../../../../assets/vector.svg"
+import {useTranslation} from "react-i18next";
 
 const Introduce: React.FC = () => {
+   const { t } = useTranslation();
     return (
         <div className="container flex flex-col py-1 phoneLg:py-10 laptop:flex-row px-6 mx-auto  gap-10 ">
             <div className="relative flex flex-col items-start gap-10 laptop:w-2/4    ">
@@ -17,15 +19,13 @@ const Introduce: React.FC = () => {
                 />
                 <div className="mx-auto flex flex-col items-center laptop:mx-0 laptop:items-start ">
                     <span className="text-20px phoneLg:text-32px laptop:text-24px    ">
-                        Hi I am
+                       {t("hi")}
                     </span>
-                    <h1 className={" font-bold text-white-dark text-24px phoneLg:text-36px laptop:text-28px"}>Kotasov
-                                                                                                              Oleksandr</h1>
+                    <h1 className={" font-bold text-white-dark text-24px phoneLg:text-36px laptop:text-28px"}>{t("myName")} </h1>
                 </div>
 
                 <div className="flex flex-col items-start mx-auto laptop:mx-0 ">
-                    <h1 className="text-center font-black text-transparent bg-clip-text bg-bg-Front text-60px phoneLg:text-85px  laptop:text-70px laptop:text-start ">Frontend
-                                                                                                                                                                      Developer</h1>
+                    <h1 className="text-center font-black text-transparent bg-clip-text bg-bg-Front text-60px phoneLg:text-85px  laptop:text-70px laptop:text-start ">{t("job")}</h1>
                 </div>
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
                     <ul className="flex gap-7">
@@ -49,23 +49,21 @@ const Introduce: React.FC = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="mx-auto px-5 space-y-4  text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px laptop:px-0">
-                    <p>
-                        З самого дитинства мене захоплювала розробка сайтів та можливість створювати щось нове власними
-                        руками.</p>
-                    <p>
-                        Я завжди прагну розвиватися, вдосконалювати свої вміння та досягати більшого, щоб реалізовувати
-                        свої
-                        ідеї на достойному рівні!</p>
+                <div className="mx-auto px-5   text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px laptop:px-0">
+                    <div
+                        className="space-y-4" // Додаємо відступи між параграфами
+                        dangerouslySetInnerHTML={{__html: t("describeMe")}}
+                    />
                 </div>
                 <div className={"items-center justify-center w-full mx-auto flex flex-col  tablet:flex-row laptop:mx-0 laptop:justify-start "}>
                     <div className="bg-orange-500 p-5 rounded-2xl text-white text-center text-24px  phoneLg:text-30px tablet:p-5 tablet:text-24px laptop:text-20px px-5">
-                        Download CV
+                        {t("downloadCv")}
                     </div>
                     <div className="flex items-center my-3 tablet:ml-5">
                         <img src={sircle} alt={"Tiktok Logo"} className={" px-3 my-3 tablet:my-0 tablet:ml-5"}/>
                         <h1 className={"text-gray-100 rounded-2xl text-center text-14px  phoneLg:text-20px"}>
-                            Available for Hire
+                            {t("hire")}
+                         
                         </h1>
                     </div>
                 </div>

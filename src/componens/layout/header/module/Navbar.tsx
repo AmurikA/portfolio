@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
+ const { t } = useTranslation();
     const toggleMenu = () => {
   document.getElementById("burger")?.classList.toggle("active");
   document.getElementById("mobileMenu")?.classList.toggle("hidden");
@@ -14,19 +16,19 @@ const Navbar: React.FC = () => {
             {/*desktop*/}
             <nav className="hidden laptop:flex ">
                 <ul className="flex space-x-20 text-20px  text-white-dark  ">
-                    <li><a href="" className="text-active font-bold">Logo</a></li>
-                    <li><a href="" className="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="" className="">Contacts</a></li>
+                    <li><a href="" className="text-active font-bold">{t("logo")}</a></li>
+                    <li><a href="" className="">{t("about")}</a></li>
+                    <li><a href="">{t("projects")}</a></li>
+                    <li><a href="" className="">{t("contact")}</a></li>
                 </ul>
             </nav>
             {/*Mobile*/}
             <nav id="mobileMenu" className=" hidden fixed left-0 top-0 bottom-0 h-full  w-full items-center justify-center  bg-main-background   z-20 laptop:hidden">
                 <ul className=" flex flex-col items-center gap-12 text-30px  text-white-dark  ">
-                    <li><a href="" className="text-active font-bold">Logo</a></li>
-                    <li><a href="" className="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="" className="">Contacts</a></li>
+                    <li><a href="" className="text-active font-bold">{t("logo")}</a></li>
+                    <li><a href="" className="">{t("about")}</a></li>
+                    <li><a href="">{t("projects")}</a></li>
+                    <li><a href="" className="">{t("contact")}</a></li>
                 </ul>
 
             </nav>
