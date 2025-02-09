@@ -5,12 +5,12 @@ import { initReactI18next } from "react-i18next";
 
 const getLanguageFromURL = () => {
   const lang = window.location.pathname.split("/")[1];
-  return ["en", "uk"].includes(lang) ? lang : "en"; // Перевіряємо, чи є мова в URL
+  return ["en", "ua"].includes(lang) ? lang : "en"; // Перевіряємо, чи є мова в URL
 };
 
 const resources = {
   en: { translation: translationEN },
-  uk: { translation: translationUK }
+  ua: { translation: translationUK }
 };
 
 i18n.use(initReactI18next).init({

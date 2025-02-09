@@ -10,7 +10,7 @@ const PortfolioPage:React.FC = () => {
 
     useEffect(() => {
         const lang = location.pathname.split("/")[1]; // Отримуємо мову з URL
-        if (["en", "uk"].includes(lang)) {
+        if (["en", "ua"].includes(lang)) {
             i18n.changeLanguage(lang); // ✅ Міняємо мову динамічно
         }
     }, [location, i18n]);
