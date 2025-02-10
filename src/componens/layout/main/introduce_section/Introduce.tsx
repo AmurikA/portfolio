@@ -11,7 +11,7 @@ const Introduce: React.FC = () => {
    const { t } = useTranslation();
     return (
         <div id="home"
-             className="container flex flex-col py-1 phoneLg:py-10 laptop:flex-row px-6 mx-auto gap-10 mt-[100px] ">
+             className="container flex flex-col py-1 phoneLg:py-10 laptop:flex-row px-6 mx-auto gap-10 mt-[110px] phoneLg:mt-[100px]">
             <div className="relative flex flex-col items-start gap-10 laptop:w-2/4    ">
                 <img
                     src={vector}

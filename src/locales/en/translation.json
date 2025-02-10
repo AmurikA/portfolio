@@ -27,8 +27,11 @@
       "link": "https://github.com/DUIKTSSD/ssd"
     }
   ],
+  "project_btn1": "View the video",
+  "project_btn2":"Go to",
   "quoteSection": "Good design is a language, not a style",
   "quoteAuthor": "Massimo Vignelli",
   "footerTitle": "Let’s Work Together!",
+  "footerPhone": "My Phone: ",
   "footerEmail": "My Gmail: "
 }

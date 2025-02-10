@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
+import PopUpVideo from "../../../../modules/popUp/PopUpVideo.tsx";
+import {useTranslation} from "react-i18next";
 
 type Project = {
     image: string;
@@ -11,8 +13,9 @@ type Project = {
 type ProjectSelectorProps = {
     projects: Project[];
 };
-
 const ProjectSelector: React.FC<ProjectSelectorProps> = ({projects}) => {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const {t} = useTranslation();
     return (
         <div className="w-full gap-y-6 flex flex-col ">
             {projects.map((project, index) => (
@@ -26,22 +29,33 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({projects}) => {
                         />
                         <div className="absolute inset-0 bg-black/30"></div>
                     </div>
-                    <div className="flex flex-col h-full p-4">
+                    <div className="flex flex-col h-full p-4 " >
                         <h3 className="text-24px font-bold  pb-2 text-heading-bg text-center phoneLg:text-28px laptop:text-left ">{project.title}</h3>
                         <p className="text-16px phoneLg:text-18px pb-6 text-center">{project.subtitle}</p>
                         <p className="text-18px  phoneLg:text-20px">{project.description}</p>
-                        <div className="mt-auto self-end">
-                        <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mt-3 text-24px inline-flex items-center justify-center bg-white text-black rounded-full w-10 h-10 shadow-md"
-                        >
-                            →
-                        </a></div>
+                        <div className="mt-auto flex space-x-4   justify-center p-5   ">
+                            <button
+                                onClick={() => setSelectedProject(project)}
+                                className="px-4 py-2 text-16px  phoneLg:text-18px bg-gray-text text-white rounded-lg shadow-md hover:bg-active transition"
+                            >
+                                {t("project_btn1")}
+                            </button>
+
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex justify-center items-center px-4 py-2 text-16px   phoneLg:text-18px bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
+                            >
+                               {t("project_btn2")}
+                            </a>
+                        </div>
                     </div>
                 </div>
             ))}
+            {selectedProject && (
+                <PopUpVideo project={selectedProject} onClose={() => setSelectedProject(null)}/>
+            )}
         </div>
 
 

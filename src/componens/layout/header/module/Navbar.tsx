@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import {Link} from "react-scroll";
@@ -6,12 +6,21 @@ import {Link} from "react-scroll";
 const Navbar: React.FC = () => {
     const {t, i18n} = useTranslation();
     const navigate = useNavigate();
+
+    const [active, setActive] = useState("home");
     const toggleMenu = () => {
         document.getElementById("burger")?.classList.toggle("active");
         document.getElementById("mobileMenu")?.classList.toggle("hidden");
         document.getElementById("mobileMenu")?.classList.toggle("flex");
         document.body.classList.toggle("overflow-hidden");
     };
+    const handleSetActive=(id:string)=>{
+        setActive(id);
+    }
+    const handleSetActiveMobile=(id:string)=>{
+        setActive(id);
+        toggleMenu();
+    }
 
     const changeLanguage = (lang: string) => {
         navigate(lang, {replace: true});
@@ -21,7 +30,7 @@ const Navbar: React.FC = () => {
     };
     return (
 
-        <div className=" container flex  justify-between items-center mx-auto py-10 px-5  " >
+        <div className=" container flex  justify-between items-center mx-auto py-10 px-5  bg-main-background z-20  " >
             <span className="font-bold font-k2D tracking-[0.9px] text-transparent bg-clip-text bg-bg-logo text-[24px] laptop:text-[30px] z-50">
                 My Portfolio:)
             </span>
@@ -49,31 +58,31 @@ const Navbar: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden laptop:flex">
                 <ul className="flex space-x-20 text-[20px] text-white-dark">
-                    <li><Link to="home" smooth={true} duration={500} offset={-100} className="cursor-pointer text-active font-bold">{t("logo")}</Link></li>
-                    <li><Link to="about" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("about")}</Link>
+                    <li><Link to="home" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "home" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("home")}>{t("logo")}</Link></li>
+                    <li><Link to="about" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "about" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("about")} >{t("about")}</Link>
                     </li>
-                    <li><Link to="myStack" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("stack")}</Link>
+                    <li><Link to="myStack" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "myStack" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("myStack")}>{t("stack")}</Link>
                     </li>
-                    <li><Link to="projects" smooth={true} duration={500} offset={-100} className="cursor-pointer">{t("projects")}</Link></li>
-                    <li><Link to="quote" smooth={true} duration={500}  offset={-100} className="cursor-pointer">{t("Quote")}</Link>
+                    <li><Link to="projects" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "projects" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("projects")}>{t("projects")}</Link></li>
+                    <li><Link to="quote" smooth={true} duration={500}  offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "quote" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("quote")}>{t("quote")}</Link>
                     </li>
                 </ul>
             </nav>
 
             {/* Mobile Navigation */}
             <nav id="mobileMenu"
-                 className="hidden fixed left-0 top-0 bottom-0 h-full w-full items-center justify-center bg-main-background z-20 laptop:hidden">
-                <ul className="flex flex-col items-center gap-12 text-[30px] text-white-dark">
-                    <li ><Link to="home" smooth={true} duration={500} offset={-120}  className="cursor-pointer text-active font-bold" onClick={toggleMenu}>{t("logo")}</Link></li>
-                    <li><Link to="about" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("about")}</Link>
+                 className="hidden fixed left-0 top-0 bottom-0 h-full w-full items-center justify-center bg-main-background z-10 laptop:hidden">
+                <ul className="flex flex-col items-center  gap-10 text-[25px] text-white-dark ">
+                    <li ><Link to="home" smooth={true} duration={500} offset={-120}  className={`cursor-pointer text-active font-bold ${active === "home" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActiveMobile("home")}>{t("logo")}</Link></li>
+                    <li><Link to="about" smooth={true} duration={500} offset={-120} className={`cursor-pointer text-active font-bold ${active === "about" ? "text-active" : "text-white-dark"}`}  onClick={()=>handleSetActiveMobile("about")}>{t("about")}</Link>
                     </li>
-                    <li><Link to="myStack" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("stack")}</Link>
+                    <li><Link to="myStack" smooth={true} duration={500} offset={-120}  className={`cursor-pointer text-active font-bold ${active === "myStack" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActiveMobile("myStack")}>{t("stack")}</Link>
                     </li>
-                    <li><Link to="projects" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("projects")}</Link>
+                    <li><Link to="projects" smooth={true} duration={500} offset={-120} className={`cursor-pointer text-active font-bold ${active === "projects" ? "text-active" : "text-white-dark"}`}  onClick={()=>handleSetActiveMobile("projects")}>{t("projects")}</Link>
                     </li>
-                    <li><Link to="quote" smooth={true} duration={500} offset={-120} className="cursor-pointer" onClick={toggleMenu}>{t("Quote")}</Link>
+                    <li><Link to="quote" smooth={true} duration={500} offset={-120}  className={`cursor-pointer text-active font-bold ${active === "quote" ? "text-active" : "text-white-dark"}`}  onClick={()=>handleSetActiveMobile("quote")}>{t("Quote")}</Link>
                     </li>
-                    <div className=" flex space-x-5 ">
+                    <div className=" flex space-x-10 ">
                         <button
                             onClick={() => changeLanguage("/en")}
                             className={`px-4 py-4 text-sm font-bold rounded ${

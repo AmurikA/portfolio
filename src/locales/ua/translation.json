@@ -27,9 +27,12 @@
       "link": "https://github.com/DUIKTSSD/ssd"
     }
   ],
+  "project_btn1": "Переглянути відео",
+  "project_btn2":"Перейти",
    "quoteSection": "Хороший дизайн - це мова, а не стиль",
   "quoteAuthor": "Массімо Віньєллі",
   "footerTitle": "Давайте працювати разом!",
+  "footerPhone": "Мій телефон",
   "footerEmail": "Моя пошта:  "
 
 }
