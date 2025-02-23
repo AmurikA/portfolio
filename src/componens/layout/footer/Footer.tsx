@@ -21,22 +21,22 @@ const Footer: React.FC = () => {
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
                     <ul className="flex gap-7">
                         <li>
-                            <a href={""}> <img src={InstagramLogoImg}
+                             <img src={InstagramLogoImg}
                                                alt="Instagram Logo"
                                                className="w-12px h-12px phoneLg:w-14 phoneLg:h-14 laptop:w-12 laptop:h-12"/>
-                            </a>
+
                         </li>
                         <li>
-                            <a href={""}> <img src={GitLogoImg}
+                             <img src={GitLogoImg}
                                                alt="Git Logo"
                                                className=" w-12px h-12px phoneLg:w-14 phoneLg:h-14 laptop:w-12 laptop:h-12"/>
-                            </a>
+
                         </li>
                         <li>
-                            <a href={""}> <img src={FigmaLogoImg}
+                             <img src={FigmaLogoImg}
                                                alt="Figma Logo"
                                                className=" w-12px h-12px phoneLg:w-14 phoneLg:h-14 laptop:w-12 laptop:h-12"/>
-                            </a>
+
                         </li>
                     </ul>
                 </div>

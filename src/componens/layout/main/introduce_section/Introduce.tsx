@@ -31,22 +31,22 @@ const Introduce: React.FC = () => {
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
                     <ul className="flex gap-7">
                         <li>
-                            <a href={""}>
+
                                 <img src={InstagramLogoImg}
                                      alt="Instagram Logo"
                                      className="w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
-                            </a></li>
+                            </li>
                         <li>
-                            <a href={""}>
+
                                 <img src={GitLogoImg}
                                      alt="Git Logo"
                                      className=" w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
-                            </a></li>
-                        <li><a href={""}>
+                            </li>
+                        <li>
                             <img src={FigmaLogoImg}
                                  alt="Figma Logo"
                                  className=" w-14 h-14 phoneLg:w-16 phoneLg:h-16 laptop:w-12 laptop:h-12"/>
-                        </a>
+
                         </li>
                     </ul>
                 </div>

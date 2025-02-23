@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import {Link} from "react-scroll";
@@ -27,7 +27,35 @@ const Navbar: React.FC = () => {
         if (window.innerWidth < 1024) {
             toggleMenu();
         }
-    };
+    }; useEffect(() => {
+        const handleScroll = () => {
+            const sections = ["home", "about", "myStack", "projects", "quote"];
+            let defaultSection = sections[0]; // За замовчуванням "home"
+            let minDistance = Infinity;
+
+            sections.forEach((id) => {
+                const element = document.getElementById(id);
+                if (element) {
+                    const rect = element.getBoundingClientRect();
+                    const distance = Math.abs(rect.top - window.innerHeight / 2);
+
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        defaultSection = id;
+                    }
+                }
+            });
+
+            setActive(defaultSection);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Викликаємо одразу, щоб оновити стан при завантаженні сторінки
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
 
         <div className=" container flex  justify-between items-center mx-auto py-10 px-5  bg-main-background z-20  " >

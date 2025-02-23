@@ -41,14 +41,7 @@ const ProjectSelector: React.FC<ProjectSelectorProps> = ({projects}) => {
                                 {t("project_btn1")}
                             </button>
 
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex justify-center items-center px-4 py-2 text-16px   phoneLg:text-18px bg-gray-200 text-black rounded-lg shadow-md hover:bg-gray-300 transition"
-                            >
-                               {t("project_btn2")}
-                            </a>
+
                         </div>
                     </div>
                 </div>
