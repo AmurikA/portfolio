@@ -3,6 +3,7 @@ import About from "./about_section/About.tsx";
 import Project from "./project_section/Project.tsx";
 import MyStack from "./steck_section/MyStack.tsx";
 import Quote from "./quote_section/Quote.tsx";
+import Schedule from "./schedule_section/Schedule.tsx";
 
 const Main = () => {
 
@@ -10,6 +11,7 @@ const Main = () => {
         <div>
             <Indroduce/>
             <About/>
+            <Schedule/>
             <MyStack/>
             <Project/>
             <Quote/>

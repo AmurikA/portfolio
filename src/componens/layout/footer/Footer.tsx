@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className=" flex flex-col items-center laptop:flex-row laptop:justify-center">
                     <span className={"text-20px"}>{t("footerEmail")}</span>
-                    <span className={"ml-1 underline text-20px  "}>sasha24heroy@gmail.com</span>
+                    <span className={"ml-1 underline text-20px  "}>oleksandr.kotasov@gmail.com</span>
                 </div>
                 <div className="flex justify-center gap-7 mx-auto laptop:mx-0">
                     <ul className="flex gap-7">

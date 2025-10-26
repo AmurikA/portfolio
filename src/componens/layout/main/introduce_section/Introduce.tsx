@@ -5,6 +5,7 @@ import GitLogoImg from '../../../../assets/github.svg';
 import FigmaLogoImg from '../../../../assets/figma.svg';
 import sircle from "../../../../assets/sircle.svg"
 import vector from "../../../../assets/vector.svg"
+import cvFile from '../../../../../public/assets/cv.pdf';
 import {useTranslation} from "react-i18next";
 
 const Introduce: React.FC = () => {
@@ -52,18 +53,23 @@ const Introduce: React.FC = () => {
                 </div>
                 <div className="mx-auto px-5   text-16px phoneLg:text-24px laptop:mx-0 laptop:text-start laptop:text-20px laptop:px-0">
                     <div
-                        className="space-y-4" // Додаємо відступи між параграфами
+                        className="space-y-4"
                         dangerouslySetInnerHTML={{__html: t("describeMe")}}
                     />
                 </div>
                 <div className={"items-center justify-center w-full mx-auto flex flex-col  tablet:flex-row laptop:mx-0 laptop:justify-start "}>
-                    <div className="bg-orange-500 p-5 rounded-2xl text-white text-center text-24px  phoneLg:text-30px tablet:p-5 tablet:text-24px laptop:text-20px px-5">
+                    <a
+                        href={cvFile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block bg-orange-500 p-5 rounded-2xl text-white text-center text-24px phoneLg:text-30px tablet:p-5 tablet:text-24px laptop:text-20px cursor-pointer"
+                    >
                         {t("downloadCv")}
-                    </div>
+                    </a>
                     <div className="flex items-center my-3 tablet:ml-5">
                         <img src={sircle} alt={"Tiktok Logo"} className={" px-3 my-3 tablet:my-0 tablet:ml-5"}/>
                         <h1 className={"text-gray-100 rounded-2xl text-center text-14px  phoneLg:text-20px"}>
-                            {t("hire")}
+                        {t("hire")}
 
                         </h1>
                     </div>

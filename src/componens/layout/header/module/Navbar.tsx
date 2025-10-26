@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
         }
     }; useEffect(() => {
         const handleScroll = () => {
-            const sections = ["home", "about", "myStack", "projects", "quote"];
+            const sections = ["home", "about","schedule", "myStack", "projects", "quote"];
             let defaultSection = sections[0]; // За замовчуванням "home"
             let minDistance = Infinity;
 
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         };
 
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Викликаємо одразу, щоб оновити стан при завантаженні сторінки
+        handleScroll();
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
@@ -86,13 +86,46 @@ const Navbar: React.FC = () => {
             {/* Desktop Navigation */}
             <nav className="hidden laptop:flex">
                 <ul className="flex space-x-20 text-[20px] text-white-dark">
-                    <li><Link to="home" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "home" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("home")}>{t("logo")}</Link></li>
-                    <li><Link to="about" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "about" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("about")} >{t("about")}</Link>
+                    <li><Link to="home"
+                              smooth={true}
+                              duration={500}
+                              offset={-100}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "home" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("home")}>{t("logo")}</Link></li>
+                    <li><Link to="about"
+                              smooth={true}
+                              duration={500}
+                              offset={-200}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "about" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("about")}>{t("about")}</Link>
                     </li>
-                    <li><Link to="myStack" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "myStack" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("myStack")}>{t("stack")}</Link>
+                    <li><Link to="schedule"
+                              smooth={true}
+                              duration={500}
+                              offset={-100}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "schedule" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("schedule")}>{t("schedule")}</Link>
                     </li>
-                    <li><Link to="projects" smooth={true} duration={500} offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "projects" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("projects")}>{t("projects")}</Link></li>
-                    <li><Link to="quote" smooth={true} duration={500}  offset={-100} className={`cursor-pointer transition-colors duration-300 ${active === "quote" ? "text-active" : "text-white-dark"}`} onClick={()=>handleSetActive("quote")}>{t("quote")}</Link>
+
+                    <li><Link to="myStack"
+                              smooth={true}
+                              duration={500}
+                              offset={-350}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "myStack" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("myStack")}>{t("stack")}</Link>
+                    </li>
+                    <li><Link to="projects"
+                              smooth={true}
+                              duration={500}
+                              offset={-200}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "projects" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("projects")}>{t("projects")}</Link></li>
+                    <li><Link to="quote"
+                              smooth={true}
+                              duration={500}
+                              offset={-100}
+                              className={`cursor-pointer transition-colors duration-300 ${active === "quote" ? "text-active" : "text-white-dark"}`}
+                              onClick={() => handleSetActive("quote")}>{t("quote")}</Link>
                     </li>
                 </ul>
             </nav>
