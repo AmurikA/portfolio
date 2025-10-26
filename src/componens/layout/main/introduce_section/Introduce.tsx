@@ -5,7 +5,7 @@ import GitLogoImg from '../../../../assets/github.svg';
 import FigmaLogoImg from '../../../../assets/figma.svg';
 import sircle from "../../../../assets/sircle.svg"
 import vector from "../../../../assets/vector.svg"
-import cvFile from '../../../../../public/assets/cv.pdf';
+import cvFile from '/assets/cv.pdf';
 import {useTranslation} from "react-i18next";
 
 const Introduce: React.FC = () => {
