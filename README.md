@@ -1,3 +1,3 @@
 # React + TypeScript + Vite + Tailwind
-Переглянути портоліо 
+Переглянути портфоліо 
 https://amurika.github.io/portfolio/
